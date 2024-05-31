@@ -89,7 +89,9 @@ a {
 }
 
 .country-card img {
-  width: 100%;
+  object-fit: cover;
+  block-size: 300px;
+  inline-size: 100%;
 }
 
 .search-filter-container {

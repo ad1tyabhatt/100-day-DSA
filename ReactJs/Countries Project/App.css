@@ -89,7 +89,12 @@ a {
 }
 
 .country-card img {
-    width: 100%;
+    /* width: 100%; */
+    inline-size: 100%;
+    block-size: 300px;
+    /* overflow: hidden; */
+    object-fit: cover;
+
 }
 
 

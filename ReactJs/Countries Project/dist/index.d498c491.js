@@ -27221,7 +27221,7 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _appCss = require("./App.css");
+var _react = require("react");
 var _header = require("./components/Header");
 var _headerDefault = parcelHelpers.interopDefault(_header);
 var _searchBar = require("./components/SearchBar");
@@ -27230,49 +27230,58 @@ var _selectMenu = require("./components/SelectMenu");
 var _selectMenuDefault = parcelHelpers.interopDefault(_selectMenu);
 var _countriesList = require("./components/CountriesList");
 var _countriesListDefault = parcelHelpers.interopDefault(_countriesList);
+var _appCss = require("./App.css");
+var _s = $RefreshSig$();
 const App = ()=>{
+    _s();
+    const [query, setQuery] = (0, _react.useState)("");
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "App.jsx",
-                lineNumber: 10,
-                columnNumber: 5
+                lineNumber: 13,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "search-filter-container",
                         children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _searchBarDefault.default), {}, void 0, false, {
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _searchBarDefault.default), {
+                                setQuery: setQuery
+                            }, void 0, false, {
                                 fileName: "App.jsx",
-                                lineNumber: 13,
+                                lineNumber: 16,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _selectMenuDefault.default), {}, void 0, false, {
                                 fileName: "App.jsx",
-                                lineNumber: 14,
+                                lineNumber: 17,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "App.jsx",
-                        lineNumber: 12,
+                        lineNumber: 15,
                         columnNumber: 9
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _countriesListDefault.default), {}, void 0, false, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _countriesListDefault.default), {
+                        query: query
+                    }, void 0, false, {
                         fileName: "App.jsx",
-                        lineNumber: 16,
+                        lineNumber: 19,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "App.jsx",
-                lineNumber: 11,
-                columnNumber: 5
+                lineNumber: 14,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
 };
+_s(App, "qO/HZodsWTfJhuzZtdaxiosei2U=");
 _c = App;
 exports.default = App;
 var _c;
@@ -27283,7 +27292,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./App.css":"7g3a6","./components/Header":"6nmoh","./components/SearchBar":"4HJPW","./components/SelectMenu":"hfvcB","./components/CountriesList":"bJsk6"}],"gkKU3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./App.css":"7g3a6","./components/Header":"6nmoh","./components/SearchBar":"4HJPW","./components/SelectMenu":"hfvcB","./components/CountriesList":"bJsk6","react":"21dqq"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -27534,7 +27543,7 @@ parcelHelpers.export(exports, "default", ()=>SearchBar);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-function SearchBar() {
+function SearchBar({ setQuery }) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "search-container",
         children: [
@@ -27546,6 +27555,7 @@ function SearchBar() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                onChange: (e)=>setQuery(e.target.value.toLowerCase()),
                 type: "text",
                 placeholder: "Search for a country..."
             }, void 0, false, {
@@ -27667,27 +27677,29 @@ var _countriesData = require("../countriesData");
 var _countriesDataDefault = parcelHelpers.interopDefault(_countriesData);
 var _countryCard = require("./CountryCard");
 var _countryCardDefault = parcelHelpers.interopDefault(_countryCard);
-function CountriesList() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "countries-container",
-        children: (0, _countriesDataDefault.default).map((country)=>{
-            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _countryCardDefault.default), {
-                name: country.name.common,
-                flag: country.flags.svg,
-                population: country.population,
-                region: country.region,
-                capital: country.capital?.[0]
-            }, country.name.common, false, {
-                fileName: "components/CountriesList.jsx",
-                lineNumber: 10,
-                columnNumber: 11
-            }, this);
-        })
-    }, void 0, false, {
-        fileName: "components/CountriesList.jsx",
-        lineNumber: 7,
-        columnNumber: 5
-    }, this);
+function CountriesList({ query }) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "countries-container",
+            children: (0, _countriesDataDefault.default).filter((country)=>country.name.common.toLowerCase().includes(query)).map((country)=>{
+                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _countryCardDefault.default), {
+                    name: country.name.common,
+                    flag: country.flags.svg,
+                    population: country.population,
+                    region: country.region,
+                    capital: country.capital?.[0]
+                }, country.name.common, false, {
+                    fileName: "components/CountriesList.jsx",
+                    lineNumber: 15,
+                    columnNumber: 15
+                }, this);
+            })
+        }, void 0, false, {
+            fileName: "components/CountriesList.jsx",
+            lineNumber: 8,
+            columnNumber: 7
+        }, this)
+    }, void 0, false);
 }
 _c = CountriesList;
 var _c;
