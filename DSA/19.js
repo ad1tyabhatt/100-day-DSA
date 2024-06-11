@@ -7,6 +7,6 @@ function startsWith (string,check){
 }
 
 //!alter
-// return string.slice(0,check.length)===check
+// return string.toLowerCase().slice(0,check.length)===check.toLowerCase()
 
 console.log(startsWith("HeLLo world","hello"))
